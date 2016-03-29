@@ -256,6 +256,30 @@ namespace lab2_2g
 
         }
     }
+  class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+           
+            Contact num1 = new Contact("Petrov", "15.11.1997", "+380934444365");
+            Contact num2 = new Contact("Vasilenko", "12.02.1960", "+380675447834");
+            Contact num3 = new Contact("Korolenko", "22.06.1965", "+380980708007");
+            Contact num4 = new Contact("Oleynik", "06.10.1978", "+380980708007");
+            Contact num5 = new Contact("Afon", "23.05.1995", "+38096578885");
+            Directory newDir = new Directory( num1, num2, num3, num4, num5);
+            Console.WriteLine(newDir);
+            newDir.Sort();
+            Console.WriteLine(newDir);
+            Console.WriteLine(newDir.NameFinder("Oleynik"));
+            Console.WriteLine(newDir.PhoneFinder("+3809765444"));
+            Console.WriteLine(newDir.DateFinder("23.05.1995"));
+
+            Console.ReadKey();
+        }
+    }
+}
 
 
 
